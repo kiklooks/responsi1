@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:responsi1/screens/home_screen.dart';
+import 'package:responsi1/ui/ikan_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  // Default widget is a CircularProgressIndicator while checking the login status.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Aplikasi Dori',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
+      title: 'Responsi Ikan',
+      debugShowCheckedModeBanner: false,
+      home: IkanPage(), // The displayed page is determined by the login status.
     );
   }
 }
+
