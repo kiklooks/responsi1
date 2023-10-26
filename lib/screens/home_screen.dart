@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       color: 'Oren',
       habitat: 'Air Laut',
     ), Fish(
-      id: '2',
+      id: '3',
       name: 'Dori',
       species: 'Ikan tang biru pasifik',
       color: 'Biru',
